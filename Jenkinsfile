@@ -23,7 +23,7 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                 }
                 failure {
-                    githubNotify description: 'Tests has failed.',  status: 'FAILURE'
+                    githubNotify credentialsId: 'token', description: 'Tests has failed.',  status: 'FAILURE'
                 }
             }
         }
