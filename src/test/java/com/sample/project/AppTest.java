@@ -34,6 +34,6 @@ public class AppTest
     @Test
     public void testGetQuestionsAndAnswers()
     {
-        assertEquals("questions and answers", App.getQuestionsAndAnswers());
+        assertEquals("questions", App.getQuestionsAndAnswers());
     }
 }
