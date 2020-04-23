@@ -25,6 +25,7 @@ pipeline {
                 failure {
                     githubNotify description: 'Tests has failed.',  status: 'FAILURE'
                 }
+            }
         }
         stage('Deliver') { 
             steps {
