@@ -22,9 +22,6 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-                failure {
-                    githubNotify credentialsId: '43337632-f8f1-4f5a-9ee3-3abf3e53bcf1', description: 'Tests has failed.',  status: 'FAILURE'
-                }
             }
         }
         stage('Deliver') { 
