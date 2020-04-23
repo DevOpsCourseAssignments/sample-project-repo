@@ -27,6 +27,7 @@ pipeline {
         stage('Deliver') { 
             steps {
                 sh 'mvn install' 
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
     }
