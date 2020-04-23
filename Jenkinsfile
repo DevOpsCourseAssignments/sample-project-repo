@@ -22,7 +22,9 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-            }
+                failure {
+                    githubNotify description: 'Tests has failed.',  status: 'FAILURE'
+                }
         }
         stage('Deliver') { 
             steps {
